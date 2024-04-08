@@ -30,3 +30,17 @@ sendExampleRequest = do
   resp <- runClientM (getCompletion exampleRequest version apiKey) env
   print resp
 ```
+
+## Testing
+
+Simple testing:
+
+```shell
+cabal test
+```
+
+Live testing with `CLAUDE_API_KEY` variable set:
+
+```shell
+cabal test --test-options='--live'
+```
