@@ -26,11 +26,26 @@ library
                     , aeson
                     , aeson-pretty
                     , data-default
-                    , generic-lens
-                    , http-client-tls
                     , text
                     , servant
                     , servant-client
                     , lens
     hs-source-dirs:   src
     default-language: GHC2021
+
+test-suite claude-api-test
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test
+    main-is:          Main.hs
+    build-depends:    aeson
+                    , base ^>=4.17.2.1
+                    , bytestring
+                    , claude-api
+                    , data-default
+                    , generic-lens
+                    , http-client-tls
+                    , lens
+                    , raw-strings-qq
+                    , servant-client
+                    , tasty
+                    , tasty-hunit
