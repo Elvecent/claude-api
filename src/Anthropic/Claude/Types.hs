@@ -76,7 +76,7 @@ data CompletionRequest = CompletionRequest
     topK          :: Maybe Integer,
     metadata      :: Maybe Value
   }
-  deriving (Generic, Show)
+  deriving (Generic, Show, Eq)
 
 instance Default CompletionRequest where
   def = CompletionRequest {
