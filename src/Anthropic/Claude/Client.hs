@@ -1,11 +1,14 @@
-{-# LANGUAGE OverloadedLabels  #-}
 {-# LANGUAGE OverloadedStrings #-}
 
-module Anthropic.Claude.Client where
+module Anthropic.Claude.Client
+  ( Version
+  , APIKey
+  , module Anthropic.Claude.Types
+  , getCompletion
+  ) where
 
 import           Anthropic.Claude.API
 import           Anthropic.Claude.Types
-import           Data.Generics.Labels   ()
 import           Data.Proxy
 import           Servant.Client
 
